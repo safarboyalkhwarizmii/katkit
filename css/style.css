@@ -1,0 +1,66 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-control {
+    max-width: 350px;
+    margin: 155px auto;
+}
+
+.form-control label, label span {
+    display: block;
+}
+
+.form-control label {
+    margin: 12px 0;
+}
+
+.form-control label input {
+    width: 350px;
+    height: 50px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    padding: 17px 18px;
+}
+
+.form-control label span {
+    line-height: 19px;
+    margin-bottom: 12px;
+}
+
+.form-control p {
+    margin-top: 30px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #808080;
+}
+
+.form-control p a {
+    color: #128EDE;
+}
+
+.hot-button {
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #FF0000 47%, #FF0000 73.44%, #CC0000 101%);
+    width: 148px;
+    height: 39px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 5px;
+    border: none;
+}
+
+.hot-button:hover {
+    cursor: pointer;
+}
