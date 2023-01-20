@@ -2,10 +2,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem('token')
     if (token == null) {
-        if (window.location.pathname === "/katkit/registration/") {
+        if (window.location.pathname === "/registration/") {
 
-        } else if (!(window.location.pathname === "/katkit/login/")) {
-            window.location.replace("/katkit/login/");
+        } else if (!(window.location.pathname === "/login/")) {
+            window.location.replace("/login/");
         }
 
     } else {
@@ -26,11 +26,11 @@ function login(email, password) {
         body: jsonBody
     })
         .then(response => response.json())
-        .then(data => {
-            if (data.status === 200) {
-                localStorage.setItem('token', data.token);
-                window.location.replace("./katkit/");
-            }
+        .then((data) => {
+            console.log(data)
+            localStorage.setItem('token', data.token);
+            localStorage.getItem('token')
+            window.location.replace("/");
         })
 }
 
@@ -47,11 +47,7 @@ function register(name, surname, email, password) {
         body: jsonBody
     })
         .then(response => response.json())
-        .then(data => {
-            if (data.status === 200) {
-                login(email, password);
-                localStorage.setItem('token', data.token);
-                window.location.replace("./katkit/");
-            }
+        .then((data) => {
+            login(email, password);
         })
 }

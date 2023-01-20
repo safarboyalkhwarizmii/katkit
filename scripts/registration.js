@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     loginButton.addEventListener("click", (event) => {
         event.preventDefault();
 
-        let name = document.getElementById("name");
-        let surname = document.getElementById("surname");
-        let email = document.getElementById("email");
-        let password = document.getElementById("password");
+        let name = document.getElementById("name").value;
+        let surname = document.getElementById("surname").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
         register(name, surname, email, password);
     })
 

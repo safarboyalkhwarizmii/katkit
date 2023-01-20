@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loginButton.addEventListener("click", (event) => {
         event.preventDefault();
 
-        let email = document.getElementById("email");
-        let password = document.getElementById("password");
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
         login(email, password);
     })
 
