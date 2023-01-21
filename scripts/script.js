@@ -33,7 +33,7 @@ function login(email, password) {
         .then((data) => {
             console.log(data)
             localStorage.setItem('token', data.token);
-            localStorage.getItem('token')
+            localStorage.getItem('token');
             window.location.replace("/");
         })
 }
