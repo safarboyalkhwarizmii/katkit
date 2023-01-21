@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     } else {
-        // content will shown
+        if (window.location.pathname === "/") {
+
+        } else {
+            window.location.replace("/");
+        }
     }
 })
 
@@ -17,7 +21,7 @@ function login(email, password) {
     let userObj = {email: email, password: password};
     let jsonBody = JSON.stringify(userObj);
 
-    fetch("http://katkit.ap-south-1.elasticbeanstalk.com/auth/authorization", {
+    fetch("https://katkit.azurewebsites.net/auth/authorization", {
         method: "POST",
         headers: {
             "Accept-language": "EN",
@@ -38,7 +42,7 @@ function register(name, surname, email, password) {
     let userObj = {name: name, surname: surname, email: email, password: password};
     let jsonBody = JSON.stringify(userObj);
 
-    fetch("http://katkit.ap-south-1.elasticbeanstalk.com/auth/registration", {
+    fetch("https://katkit.azurewebsites.net/auth/registration", {
         method: "POST",
         headers: {
             "Accept-language": "EN",
@@ -48,6 +52,9 @@ function register(name, surname, email, password) {
     })
         .then(response => response.json())
         .then((data) => {
-            login(email, password);
+            console.log(data)
+            if (data.status === 'NOT_ACTIVE') {
+                location.replace("./verification")
+            }
         })
 }

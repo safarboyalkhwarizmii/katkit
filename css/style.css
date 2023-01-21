@@ -64,3 +64,37 @@ a {
 .hot-button:hover {
     cursor: pointer;
 }
+
+article.verification {
+    max-width: 521px;
+    margin: 100px auto;
+}
+
+article.verification .verification-header img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    vertical-align: middle;
+}
+
+article.verification .verification-body {
+    border: 1px solid #E2E2E2;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    padding: 34px 38px;
+}
+article.verification .verification-body h2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 17px;
+}
+
+article.verification .verification-body p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+article.verification .verification-body .hot-button {
+    margin-top: 17px;
+}
